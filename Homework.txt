@@ -3,13 +3,13 @@ span.top-navigation__item-text a
 2.
 div.ng-binding
 3.
-a.ng-binding
+div.news-page-item__title a.ng-binding
 4.
-a.search-result__item-name 
-5.
 //a[contains(text(),'Automation')]
-6.
-//time[contains(text(),'NOVEMBER')] | //span[contains(text(),'NOVEMBER')]
+5.
+//li/time[contains(text(),'NOVEMBER')]/following-sibling::div/a/span[contains(text(),'Learn more')]
+
+
 
 
 1.
