@@ -1,0 +1,24 @@
+1.
+span.top-navigation__item-text a
+2.
+div.ng-binding
+3.
+a.ng-binding
+4.
+a.search-result__item-name 
+5.
+//a[contains(text(),'Automation')]
+6.
+//time[contains(text(),'NOVEMBER')] | //span[contains(text(),'NOVEMBER')]
+
+
+1.
+//table[@class='wikitable sortable jquery-tablesorter'][1]//tr/td[*[contains(. ,'USA')]]/preceding-sibling::td[3]
+2.
+td.logo img
+3.
+//ul//li//a//span[contains(. , '2')]
+4.
+li a.interlanguage-link-target
+5.
+//div[@class = 'body']//ul//li[contains(@id,'t-')]
