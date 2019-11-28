@@ -2,6 +2,10 @@ package ua.com.epam.core.rest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.sun.deploy.net.URLEncoder;
+import java.util.Map;
+import java.util.Map.Entry;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpHeaders;
 import org.apache.http.HttpResponse;
@@ -66,6 +70,25 @@ public class RestClient {
 
         //and the last: wrap HttpResponse to our custom Response object (look at line 148)
         wrapResponse(response);
+    }
+
+    public static String withParameters(String uri, Map<String, String> parameters) {
+        StringBuilder query = new StringBuilder();
+        char separator = '?';
+        for (Entry<String, String> param : parameters.entrySet()) {
+            query.append(separator);
+            separator = '&';
+            try {
+                query.append(URLEncoder.encode(param.getKey(), "UTF-8"));
+                if (!StringUtils.isEmpty(param.getValue())) {
+                    query.append('=');
+                    query.append(URLEncoder.encode(param.getValue(), "UTF-8"));
+                }
+            } catch (UnsupportedEncodingException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return uri + query.toString();
     }
 
     //POST take URI but as String and object to post

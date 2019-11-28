@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="mySuite" verbose="1">
+
+  <listeners>
+    <listener class-name="ua.com.epam.Listeners"/>
+  </listeners>
+
+  <test name="Tests1">
+  <classes>
+    <class name="ua.com.epam.CRUDAuthorTest"/>
+  </classes>
+</test>
+
+</suite>

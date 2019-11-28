@@ -1,6 +1,7 @@
 package ua.com.epam.utils;
 
 public interface JsonKeys {
+    //Author
     String AUTHOR_ID = "authorId";
     String AUTHOR_FIRST_NAME = "authorName.first";
     String AUTHOR_SECOND_NAME = "authorName.second";
@@ -12,4 +13,10 @@ public interface JsonKeys {
 
     String ASCENDING = "asc";
     String DESCENDING = "desc";
+
+    //Book
+    String BOOK_ID = "bookId";
+
+    //Genre
+    String GENRE_ID = "genreId";
 }

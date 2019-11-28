@@ -27,4 +27,17 @@ dependencies {
     compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.1'
     compile group: 'com.github.javafaker', name: 'javafaker', version: '1.0.0'
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
+    // https://mvnrepository.com/artifact/com.aventstack/extentreports
+    compile group: 'com.aventstack', name: 'extentreports', version: '3.0.0'
+
 }
+test {
+    useTestNG() {
+        suites 'src/test/resources/my_test.xml'
+    }
+    reports {
+        junitXml.enabled = false
+        html.enabled = true
+    }
+}
+

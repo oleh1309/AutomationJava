@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Birth {
-    private LocalDate date;
+    public LocalDate date;
     private String country;
     private String city;
 
